@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "startgreen/hero",
+  "title": "Hero",
+  "description": "A full-width hero section with headline, subtext, background image, and CTA buttons.",
+  "category": "startgreen-blocks",
+  "icon": "cover-image",
+  "keywords": [ "hero", "banner", "header", "cover", "cta" ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "blocks/hero/render.php"
+  },
+  "supports": {
+    "align": [ "full", "wide" ],
+    "anchor": true,
+    "className": true,
+    "jsx": true
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "heading": "Invest in a Greener Future",
+        "subheading": "StartGreen Capital backs bold founders building sustainable businesses that generate returns and real-world impact.",
+        "primary_button_text": "View Portfolio",
+        "secondary_button_text": "Learn More"
+      }
+    }
+  }
+}
