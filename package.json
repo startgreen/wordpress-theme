@@ -1,16 +1,13 @@
 {
-  "name": "startgreen",
+  "name": "acf-blokken-test",
   "version": "1.0.0",
-  "description": "StartGreen Capital WordPress theme — Tailwind CSS v3 + ACF Blocks",
-  "private": true,
   "scripts": {
-    "dev": "postcss src/css/app.css -o assets/css/app.css --watch",
-    "build": "NODE_ENV=production postcss src/css/app.css -o assets/css/app.css"
+    "build": "tailwindcss -i ./src/input.css -o ./style.css",
+    "dev": "concurrently \"tailwindcss -i ./src/input.css -o ./style.css --watch\" \"browser-sync start --proxy 'acf-blokken-test.local' --files '**/*.php, **/*.css'\""
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.27",
-    "postcss": "^8.5.8",
-    "postcss-cli": "^11.0.1",
-    "tailwindcss": "^3.4.19"
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "tailwindcss": "^3.4.0"
   }
 }
