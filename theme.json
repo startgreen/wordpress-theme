@@ -23,6 +23,21 @@
                     "name": "Groen",
                     "slug": "green",
                     "color": "#16a34a"
+                },
+                {
+                    "name": "Donker Groen",
+                    "slug": "forest-green",
+                    "color": "#2e5446"
+                },
+                {
+                    "name": "Mint Groen",
+                    "slug": "mint",
+                    "color": "#7ecfa0"
+                },
+                {
+                    "name": "Indigo Blauw",
+                    "slug": "indigo",
+                    "color": "#5c6cf5"
                 }
             ]
         },

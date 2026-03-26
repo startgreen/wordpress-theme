@@ -10,6 +10,13 @@ add_action('enqueue_block_editor_assets', function() {
     wp_enqueue_style('theme-editor-style', get_stylesheet_uri());
 });
 
+// Load Tailwind CDN inside the editor block-preview iframe
+add_action('enqueue_block_assets', function() {
+    if (is_admin()) {
+        wp_enqueue_script('tailwindcss-block-editor', 'https://cdn.tailwindcss.com', [], null, false);
+    }
+});
+
 // Theme setup
 add_action('after_setup_theme', function() {
     // Navigation menus
