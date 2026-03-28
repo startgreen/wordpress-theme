@@ -1,0 +1,94 @@
+{
+    "key": "group_stats_block",
+    "title": "Block: Stats",
+    "fields": [
+        {
+            "key": "field_stats_heading_deel1",
+            "label": "Heading — regel 1 (bold)",
+            "name": "stats_heading_deel1",
+            "type": "text",
+            "instructions": "Eerste regel, vetgedrukt en wit.",
+            "required": 0,
+            "placeholder": "bijv. Impact als onderdeel van"
+        },
+        {
+            "key": "field_stats_heading_deel2",
+            "label": "Heading — regel 2 (italic)",
+            "name": "stats_heading_deel2",
+            "type": "text",
+            "instructions": "Tweede regel, cursief en mintgroen.",
+            "required": 0,
+            "placeholder": "bijv. uw investering."
+        },
+        {
+            "key": "field_stats_intro",
+            "label": "Intro tekst",
+            "name": "stats_intro",
+            "type": "textarea",
+            "instructions": "Korte alinea onder de heading.",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_stats_button_tekst",
+            "label": "Button tekst",
+            "name": "stats_button_tekst",
+            "type": "text",
+            "instructions": "Tekst van de knop (laat leeg om knop te verbergen).",
+            "required": 0,
+            "placeholder": "bijv. Lees al onze impactrapportages"
+        },
+        {
+            "key": "field_stats_button_url",
+            "label": "Button URL",
+            "name": "stats_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        },
+        {
+            "key": "field_stats_items_repeater",
+            "label": "Statistieken",
+            "name": "stats_items",
+            "type": "repeater",
+            "instructions": "Voeg maximaal 4 statistieken toe voor het 2×2 raster.",
+            "layout": "block",
+            "button_label": "Voeg statistiek toe",
+            "sub_fields": [
+                {
+                    "key": "field_stats_item_getal",
+                    "label": "Getal / waarde",
+                    "name": "stats_item_getal",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "bijv. 7.200 of €670M"
+                },
+                {
+                    "key": "field_stats_item_omschrijving",
+                    "label": "Omschrijving",
+                    "name": "stats_item_omschrijving",
+                    "type": "textarea",
+                    "required": 0,
+                    "rows": 2,
+                    "placeholder": "bijv. Huishoudens voorzien van duurzame energie"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/stats"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900002
+}

@@ -1,0 +1,74 @@
+{
+    "key": "group_tekst_block",
+    "title": "Block: Tekst",
+    "fields": [
+        {
+            "key": "field_tekst_achtergrond",
+            "label": "Achtergrondkleur",
+            "name": "tekst_achtergrond",
+            "type": "select",
+            "choices": {
+                "white":      "Wit",
+                "dark-green": "Donkergroen"
+            },
+            "default_value": "white",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_tekst_heading_italic",
+            "label": "Heading — italic (regel 1)",
+            "name": "tekst_heading_italic",
+            "type": "text",
+            "instructions": "Cursieve regel, weergegeven in mintgroen.",
+            "required": 0,
+            "placeholder": "bijv. Eén platform,"
+        },
+        {
+            "key": "field_tekst_heading_bold",
+            "label": "Heading — bold (regel 2)",
+            "name": "tekst_heading_bold",
+            "type": "text",
+            "instructions": "Vetgedrukte regel, kleur past automatisch aan op achtergrond.",
+            "required": 0,
+            "placeholder": "bijv. Meerdere routes naar impact"
+        },
+        {
+            "key": "field_tekst_subheading",
+            "label": "Subheading (optioneel)",
+            "name": "tekst_subheading",
+            "type": "text",
+            "instructions": "Optionele tussenkop onder de heading.",
+            "required": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_tekst_body",
+            "label": "Tekst",
+            "name": "tekst_body",
+            "type": "textarea",
+            "instructions": "Gebruik een lege regel tussen alinea's.",
+            "required": 0,
+            "rows": 6,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/tekst"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900003
+}

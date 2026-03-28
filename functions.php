@@ -53,11 +53,6 @@ add_filter('block_categories_all', function($categories) {
     return $categories;
 });
 
-// Register Section block (vanilla register_block_type voor InnerBlocks support)
-add_action('init', function() {
-    register_block_type(__DIR__ . '/blocks/section');
-});
-
 // Register ACF Blocks
 add_action('acf/init', function() {
     if (!function_exists('acf_register_block_type')) {
@@ -72,18 +67,6 @@ add_action('acf/init', function() {
         'category'        => 'startgreen',
         'icon'            => 'cover-image',
         'keywords'        => ['hero', 'banner', 'header'],
-        'mode'            => 'auto',
-        'supports'        => ['align' => false],
-    ]);
-
-    acf_register_block_type([
-        'name'            => 'two-columns',
-        'title'           => 'Twee Kolommen',
-        'description'     => 'Twee kolommen met tekst en afbeelding.',
-        'render_template' => get_template_directory() . '/blocks/two-columns/render.php',
-        'category'        => 'startgreen',
-        'icon'            => 'columns',
-        'keywords'        => ['kolommen', 'afbeelding', 'tekst'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
     ]);
@@ -107,6 +90,42 @@ add_action('acf/init', function() {
                 true // in de footer laden
             );
         },
+    ]);
+
+    acf_register_block_type([
+        'name'            => 'tekst',
+        'title'           => 'Tekst',
+        'description'     => 'Tekstblok met italic/bold heading, optionele subheading en alinea\'s.',
+        'render_template' => get_template_directory() . '/blocks/tekst/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'text',
+        'keywords'        => ['tekst', 'heading', 'intro', 'alinea'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+    ]);
+
+    acf_register_block_type([
+        'name'            => 'stats',
+        'title'           => 'Stats',
+        'description'     => 'Twee kolommen: tekst links, 2×2 statistieken raster rechts.',
+        'render_template' => get_template_directory() . '/blocks/stats/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'chart-bar',
+        'keywords'        => ['stats', 'statistieken', 'cijfers', 'impact'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+    ]);
+
+    acf_register_block_type([
+        'name'            => 'cta-rows',
+        'title'           => 'CTA Rows',
+        'description'     => 'Donkergroene sectie met heading en klikbare rijen.',
+        'render_template' => get_template_directory() . '/blocks/cta-rows/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'list-view',
+        'keywords'        => ['cta', 'rijen', 'links', 'navigatie'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
     ]);
 
     acf_register_block_type([

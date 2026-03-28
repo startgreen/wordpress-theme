@@ -1,0 +1,74 @@
+{
+    "key": "group_cta_rows_block",
+    "title": "Block: CTA Rows",
+    "fields": [
+        {
+            "key": "field_cta_heading_deel1",
+            "label": "Heading — regel 1 (bold)",
+            "name": "cta_heading_deel1",
+            "type": "text",
+            "instructions": "Eerste regel, wordt vetgedrukt weergegeven.",
+            "required": 0,
+            "placeholder": "bijv. Samen werken aan"
+        },
+        {
+            "key": "field_cta_heading_deel2",
+            "label": "Heading — regel 2 (italic)",
+            "name": "cta_heading_deel2",
+            "type": "text",
+            "instructions": "Tweede regel, wordt cursief en in mintgroen weergegeven.",
+            "required": 0,
+            "placeholder": "bijv. investeerbare transities?"
+        },
+        {
+            "key": "field_cta_items_repeater",
+            "label": "Rijen",
+            "name": "cta_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Voeg rij toe",
+            "sub_fields": [
+                {
+                    "key": "field_cta_item_label",
+                    "label": "Label (links, bold)",
+                    "name": "cta_item_label",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "bijv. Voor beleggers"
+                },
+                {
+                    "key": "field_cta_item_tekst",
+                    "label": "Tekst (rechts)",
+                    "name": "cta_item_tekst",
+                    "type": "text",
+                    "required": 0,
+                    "placeholder": "bijv. Ontdek investeringsmogelijkheden"
+                },
+                {
+                    "key": "field_cta_item_url",
+                    "label": "URL (optioneel)",
+                    "name": "cta_item_url",
+                    "type": "url",
+                    "required": 0,
+                    "placeholder": "https://..."
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/cta-rows"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900001
+}

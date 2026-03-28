@@ -2,7 +2,14 @@
    Change --radius-card here to update ALL card/image border radii site-wide.
    ─────────────────────────────────────────────────────────────────────────── */
 :root {
-    --radius-card: 1rem; /* = 16px — change this one value to update everything */
+    /* Border radius */
+    --radius-card: 1rem;
+
+    /* Typography — change these to update font sizes site-wide */
+    --fs-heading-italic: 2rem;      /* italic line above the h2 */
+    --fs-heading:        2.75rem;   /* h2 bold line */
+    --fs-subheading:     1.25rem;   /* subheading below heading */
+    --fs-body:           1rem;      /* paragraph / body text */
 }
 
 *, ::before, ::after {
