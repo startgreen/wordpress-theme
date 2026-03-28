@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "startgreen/section",
+    "title": "Section",
+    "description": "Container-blok met achtergrondkleur, optionele heading\/intro en geneste blokken.",
+    "category": "startgreen",
+    "icon": "layout",
+    "keywords": ["section", "container", "sectie", "wrapper"],
+    "attributes": {
+        "backgroundColor": {
+            "type": "string",
+            "default": "green"
+        },
+        "headingRegel1": {
+            "type": "string",
+            "default": ""
+        },
+        "headingRegel2": {
+            "type": "string",
+            "default": ""
+        },
+        "introTekst": {
+            "type": "string",
+            "default": ""
+        },
+        "slotzinDeel1": {
+            "type": "string",
+            "default": ""
+        },
+        "slotzinDeel2": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "editorScript": "file:./editor.js",
+    "render": "file:./section.php"
+}

@@ -1,3 +1,10 @@
+/* ─── Design tokens ──────────────────────────────────────────────────────────
+   Change --radius-card here to update ALL card/image border radii site-wide.
+   ─────────────────────────────────────────────────────────────────────────── */
+:root {
+    --radius-card: 1rem; /* = 16px — change this one value to update everything */
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

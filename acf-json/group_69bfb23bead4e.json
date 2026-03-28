@@ -1,0 +1,134 @@
+{
+    "key": "group_69bfb23bead4e",
+    "title": "Block: FAQ",
+    "fields": [
+        {
+            "key": "field_faq_achtergrond",
+            "label": "Achtergrondkleur",
+            "name": "faq_achtergrond",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+                "green":      "Lichtgroen",
+                "dark-green": "Donkergroen"
+            },
+            "default_value": "green",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_faq_heading_deel1",
+            "label": "Heading \u2014 deel 1 (italic)",
+            "name": "faq_heading_deel1",
+            "type": "text",
+            "instructions": "Eerste regel van de heading, wordt cursief weergegeven.",
+            "required": 0,
+            "placeholder": "bijv. Professioneel ingericht,"
+        },
+        {
+            "key": "field_faq_heading_deel2",
+            "label": "Heading \u2014 deel 2 (bold)",
+            "name": "faq_heading_deel2",
+            "type": "text",
+            "instructions": "Tweede regel van de heading, wordt vet weergegeven.",
+            "required": 0,
+            "placeholder": "bijv. Onafhankelijk gestuurd"
+        },
+        {
+            "key": "field_faq_intro",
+            "label": "Intro tekst (optioneel)",
+            "name": "faq_intro",
+            "type": "textarea",
+            "instructions": "Tekst onder de heading. Scheid alinea's met een lege regel.",
+            "required": 0,
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_faqs_repeater",
+            "label": "FAQ Items",
+            "name": "faqs",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Voeg FAQ item toe",
+            "sub_fields": [
+                {
+                    "key": "field_faq_item_icon",
+                    "label": "Icoon",
+                    "name": "faq_item_icon",
+                    "type": "select",
+                    "instructions": "Kies een icoon voor dit item.",
+                    "choices": {
+                        "diploma":   "Diploma \/ Opleiding",
+                        "chart":     "Grafiek \/ Groei",
+                        "handshake": "Handdruk \/ Samenwerking",
+                        "shield":    "Schild \/ Veiligheid",
+                        "bank":      "Bank \/ Instituut",
+                        "none":      "Geen icoon"
+                    },
+                    "default_value": "diploma",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_faq_item_question",
+                    "label": "Vraag \/ Titel",
+                    "name": "faq_item_question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_faq_item_answer",
+                    "label": "Antwoord \/ Body tekst",
+                    "name": "faq_item_answer",
+                    "type": "wysiwyg",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0
+                }
+            ]
+        },
+        {
+            "key": "field_faq_slotzin_deel1",
+            "label": "Slotzin \u2014 deel 1 (bold)",
+            "name": "faq_slotzin_deel1",
+            "type": "text",
+            "instructions": "Vetgedrukt gedeelte van de afsluitende zin.",
+            "required": 0,
+            "placeholder": "bijv. Deze manier van werken komt samen in \u00e9\u00e9n ge\u00efntegreerd platform,"
+        },
+        {
+            "key": "field_faq_slotzin_deel2",
+            "label": "Slotzin \u2014 deel 2 (italic)",
+            "name": "faq_slotzin_deel2",
+            "type": "text",
+            "instructions": "Cursief gedeelte van de afsluitende zin.",
+            "required": 0,
+            "placeholder": "bijv. waarin verschillende financieringsvormen en fondsen elkaar versterken."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1774900000
+}

@@ -10,29 +10,29 @@
         "color": {
             "palette": [
                 {
-                    "name": "Zwart",
-                    "slug": "black",
-                    "color": "#000000"
-                },
-                {
                     "name": "Wit",
                     "slug": "white",
                     "color": "#ffffff"
                 },
                 {
-                    "name": "Groen",
-                    "slug": "green",
-                    "color": "#16a34a"
-                },
-                {
-                    "name": "Donker Groen",
-                    "slug": "forest-green",
-                    "color": "#2e5446"
+                    "name": "Zwart",
+                    "slug": "black",
+                    "color": "#000000"
                 },
                 {
                     "name": "Mint Groen",
                     "slug": "mint",
-                    "color": "#7ecfa0"
+                    "color": "#3ecc9d"
+                },
+                {
+                    "name": "Donker Groen",
+                    "slug": "forest-green",
+                    "color": "#1a4a3a"
+                },
+                {
+                    "name": "Diep Groen",
+                    "slug": "deep-green",
+                    "color": "#113223"
                 },
                 {
                     "name": "Indigo Blauw",
@@ -43,17 +43,17 @@
         },
         "typography": {
             "fontSizes": [
-                { "name": "Klein",  "slug": "small",       "size": "0.875rem" },
-                { "name": "Normaal","slug": "medium",      "size": "1rem" },
-                { "name": "Groot",  "slug": "large",       "size": "1.5rem" },
+                { "name": "Klein",      "slug": "small",   "size": "0.875rem" },
+                { "name": "Normaal",    "slug": "medium",  "size": "1rem" },
+                { "name": "Groot",      "slug": "large",   "size": "1.5rem" },
                 { "name": "Zeer groot", "slug": "x-large", "size": "2.25rem" }
             ]
         },
         "spacing": {
             "spacingSizes": [
-                { "name": "Klein",  "slug": "small",  "size": "1rem" },
-                { "name": "Normaal","slug": "medium", "size": "2rem" },
-                { "name": "Groot",  "slug": "large",  "size": "4rem" }
+                { "name": "Klein",   "slug": "small",  "size": "1rem" },
+                { "name": "Normaal", "slug": "medium", "size": "2rem" },
+                { "name": "Groot",   "slug": "large",  "size": "4rem" }
             ]
         }
     },
