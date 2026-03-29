@@ -93,6 +93,18 @@ add_action('acf/init', function() {
     ]);
 
     acf_register_block_type([
+        'name'            => 'impact',
+        'title'           => 'Impact',
+        'description'     => 'Heading + tekst kolommen, genummerde blokken en optionele knop.',
+        'render_template' => get_template_directory() . '/blocks/impact/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'lightbulb',
+        'keywords'        => ['impact', 'blokken', 'cijfers', 'resultaten'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+    ]);
+
+    acf_register_block_type([
         'name'            => 'tekst',
         'title'           => 'Tekst',
         'description'     => 'Tekstblok met italic/bold heading, optionele subheading en alinea\'s.',

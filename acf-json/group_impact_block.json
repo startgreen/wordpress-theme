@@ -1,0 +1,100 @@
+{
+    "key": "group_impact_block",
+    "title": "Block: Impact",
+    "fields": [
+        {
+            "key": "field_impact_heading_italic",
+            "label": "Heading — italic (regel 1)",
+            "name": "impact_heading_italic",
+            "type": "text",
+            "instructions": "Cursieve regel, mintgroen.",
+            "required": 0,
+            "placeholder": "bijv. Wat onze impact"
+        },
+        {
+            "key": "field_impact_heading_bold",
+            "label": "Heading — bold (regel 2)",
+            "name": "impact_heading_bold",
+            "type": "text",
+            "instructions": "Vetgedrukte regel, donkergroen.",
+            "required": 0,
+            "placeholder": "bijv. mogelijk maakt."
+        },
+        {
+            "key": "field_impact_subheading",
+            "label": "Subheading (optioneel)",
+            "name": "impact_subheading",
+            "type": "text",
+            "instructions": "Optionele tussenkop boven de tekstkolom.",
+            "required": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_impact_tekst",
+            "label": "Tekst",
+            "name": "impact_tekst",
+            "type": "wysiwyg",
+            "instructions": "Alinea's in de rechterkolom.",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_impact_items_repeater",
+            "label": "Blokken (max. 4)",
+            "name": "impact_items",
+            "type": "repeater",
+            "instructions": "Nummers worden automatisch toegevoegd (01, 02, …).",
+            "layout": "block",
+            "min": 0,
+            "max": 4,
+            "button_label": "Voeg blok toe",
+            "sub_fields": [
+                {
+                    "key": "field_impact_item_tekst",
+                    "label": "Tekst",
+                    "name": "impact_item_tekst",
+                    "type": "textarea",
+                    "required": 1,
+                    "rows": 3,
+                    "placeholder": "bijv. Impactdoelstellingen zijn onderdeel van fondsstrategie en investeringsbeslissingen"
+                }
+            ]
+        },
+        {
+            "key": "field_impact_button_tekst",
+            "label": "Button tekst (optioneel)",
+            "name": "impact_button_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Lees het impact report 2024"
+        },
+        {
+            "key": "field_impact_button_url",
+            "label": "Button URL",
+            "name": "impact_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/impact"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900005
+}
