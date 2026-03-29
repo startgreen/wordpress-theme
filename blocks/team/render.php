@@ -71,7 +71,7 @@ if (empty($members)) {
                                  class="w-full h-full object-cover object-top">
                         <?php endif; ?>
                     </div>
-                    <p class="mt-3 font-semibold leading-tight" style="color:#3ecc9d;"><?php echo esc_html($name); ?></p>
+                    <h3 class="mt-3 font-semibold leading-tight" style="color:var(--sg-brand-green);"><?php echo esc_html($name); ?></h3>
                     <p class="text-sm mt-0.5" style="color:#b6abab;"><?php echo esc_html($func); ?></p>
                 </div>
             <?php endforeach; ?>
@@ -159,7 +159,7 @@ if (empty($members)) {
     transform: scale(1.04);
 }
 .team-card[data-active] .team-card-photo {
-    outline: 2px solid #3ecc9d;
+    outline: 2px solid var(--sg-brand-green);
     outline-offset: 2px;
     border-radius: var(--radius-card);
 }

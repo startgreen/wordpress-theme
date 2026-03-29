@@ -15,13 +15,13 @@ $btn_url    = trim(get_field('stats_button_url') ?? '');
 // Checkerboard: positions 0,3 = dark card; positions 1,2 = light card
 $card_colors = [
     'rgba(255,255,255,0.10)',  // 1 — dark
-    '#3ecc9d',                  // 2 — light mint
-    '#3ecc9d',                  // 3 — light mint
+    'var(--sg-brand-green)',                  // 2 — light mint
+    'var(--sg-brand-green)',                  // 3 — light mint
     'rgba(255,255,255,0.10)',  // 4 — dark
 ];
 ?>
 
-<section class="stats-block py-16 md:py-24" style="background-color:#1a4a3a;">
+<section class="stats-block py-16 md:py-24" style="background-color:var(--sg-dark-green);">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -31,13 +31,13 @@ $card_colors = [
                 <?php if ($heading1 || $heading2) : ?>
                     <div class="mb-6">
                         <?php if ($heading1) : ?>
-                            <p class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                                 <?php echo esc_html($heading1); ?>
-                            </p>
+                        </h2>
                         <?php endif; ?>
                         <?php if ($heading2) : ?>
                             <p class="text-3xl md:text-4xl lg:text-5xl leading-tight"
-                               style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #3ecc9d;">
+                               style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
                                 <?php echo esc_html($heading2); ?>
                             </p>
                         <?php endif; ?>

@@ -10,25 +10,25 @@
 $bg = get_field('faq_achtergrond') ?: 'white';
 
 $bg_map = [
-    'green'      => '#3ecc9d',
-    'dark-green' => '#1a4a3a',
+    'green'      => 'var(--sg-brand-green)',
+    'dark-green' => 'var(--sg-dark-green)',
 ];
-$bg_hex = $bg_map[$bg] ?? '#3ecc9d';
+$bg_hex = $bg_map[$bg] ?? 'var(--sg-brand-green)';
 
 $scheme = [
     'green' => [
         'h1'    => '#ffffff',
-        'h2'    => '#113223',
+        'h2'    => 'var(--sg-dark-green)',
         'intro' => '#ffffff',
         'slot1' => '#ffffff',
-        'slot2' => '#0f3f34',
+        'slot2' => 'var(--sg-dark-green)',
     ],
     'dark-green' => [
         'h1'    => '#ffffff',
-        'h2'    => '#3ecc9d',
+        'h2'    => 'var(--sg-brand-green)',
         'intro' => '#ffffff',
         'slot1' => '#ffffff',
-        'slot2' => '#3ecc9d',
+        'slot2' => 'var(--sg-brand-green)',
     ],
 ];
 $c = $scheme[$bg] ?? $scheme['green'];

@@ -8,7 +8,7 @@ $heading1 = trim(get_field('cta_heading_deel1') ?? '');
 $heading2 = trim(get_field('cta_heading_deel2') ?? '');
 ?>
 
-<section class="cta-rows-block relative overflow-hidden py-20 md:py-28" style="background-color:#1a4a3a;">
+<section class="cta-rows-block relative overflow-hidden py-20 md:py-28" style="background-color:var(--sg-dark-green);">
 
     <!-- Decorative leaf (right side) -->
     <div class="absolute inset-y-0 right-0 w-1/2 pointer-events-none select-none" aria-hidden="true"
@@ -19,7 +19,7 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
                      C260 520 220 580 240 700 C250 760 280 800 280 800
                      C280 800 400 740 460 660 C520 580 560 500 570 400
                      C580 300 600 200 580 0 Z"
-                  fill="#3ecc9d"/>
+                  fill="var(--sg-brand-green)"/>
             <path d="M560 40 C560 40 400 100 340 200 C280 300 260 380 300 480
                      C320 530 360 560 360 560"
                   stroke="#2ebc8d" stroke-width="2" fill="none" opacity="0.5"/>
@@ -40,7 +40,7 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
                 <?php endif; ?>
                 <?php if ($heading2) : ?>
                     <p class="text-4xl md:text-5xl leading-tight mt-1"
-                       style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #3ecc9d;">
+                       style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
                         <?php echo esc_html($heading2); ?>
                     </p>
                 <?php endif; ?>

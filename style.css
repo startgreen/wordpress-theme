@@ -2,14 +2,21 @@
    Change --radius-card here to update ALL card/image border radii site-wide.
    ─────────────────────────────────────────────────────────────────────────── */
 :root {
-    /* Border radius */
+    /* ── Brand colours ───────────────────────────────────────────────────────── */
+    --sg-light-green:  #cff7ea;
+    --sg-blue:         #cff7ea;
+    --sg-dark-green:   #113223;
+    --sg-brand-green:  #3ecc9d;
+    --sg-medium-green: #1f7f63;
+
+    /* ── Border radius ───────────────────────────────────────────────────────── */
     --radius-card: 1rem;
 
-    /* Typography — change these to update font sizes site-wide */
-    --fs-heading-italic: 2rem;      /* italic line above the h2 */
-    --fs-heading:        2.75rem;   /* h2 bold line */
-    --fs-subheading:     1.25rem;   /* subheading below heading */
-    --fs-body:           1rem;      /* paragraph / body text */
+    /* ── Typography ──────────────────────────────────────────────────────────── */
+    --fs-heading-italic: 2rem;
+    --fs-heading:        2.75rem;
+    --fs-subheading:     1.25rem;
+    --fs-body:           1rem;
 }
 
 *, ::before, ::after {
