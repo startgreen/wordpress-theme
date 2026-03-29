@@ -28,7 +28,7 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
         </svg>
     </div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
 
         <!-- Heading -->
         <?php if ($heading1 || $heading2) : ?>

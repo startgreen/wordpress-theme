@@ -54,7 +54,7 @@ $icons = [
     class="faq-block"
     style="background-color: <?php echo esc_attr($bg_hex); ?>;"
 >
-    <div class="max-w-5xl mx-auto px-6 md:px-12 py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
 
         <?php if ($h_deel1 || $h_deel2) : ?>
             <h2 class="mb-10 leading-tight">

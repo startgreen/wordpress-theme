@@ -23,7 +23,7 @@ $aria_label = trim(($heading1 ?? '') . ' ' . ($heading2 ?? '')) ?: 'Hero sectie'
     aria-label="<?php echo esc_attr($aria_label); ?>"
 >
     <!-- Main content -->
-    <div class="relative z-10 flex-1 flex flex-col justify-center max-w-5xl mx-auto w-full px-6 md:px-12 pt-28 pb-12">
+    <div class="relative z-10 flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full px-6 md:px-12 pt-28 pb-12">
 
         <?php if ($subheading) : ?>
             <p class="text-white/60 text-xs tracking-[0.18em] uppercase font-medium mb-8">
@@ -76,7 +76,7 @@ $aria_label = trim(($heading1 ?? '') . ' ' . ($heading2 ?? '')) ?: 'Hero sectie'
     </div>
 
     <!-- Statistics -->
-    <div class="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-12 pb-16">
+    <div class="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pb-16">
         <hr class="border-white/20 mb-10" aria-hidden="true">
         <dl class="grid grid-cols-1 sm:grid-cols-3 gap-8">
 

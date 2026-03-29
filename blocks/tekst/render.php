@@ -34,7 +34,7 @@ $body_raw   = trim(get_field('tekst_body') ?? '');
 
 <section class="tekst-block py-16 md:py-20"
          style="background-color: <?php echo esc_attr($c['bg']); ?>;">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
         <div style="max-width: 50%;">
 
             <?php if ($italic || $bold) : ?>

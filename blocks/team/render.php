@@ -36,7 +36,7 @@ if (empty($members)) {
 ?>
 
 <div class="team-block py-16" style="background-color:#f7f7f7;">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
 
         <?php if (!empty($categories) && !is_wp_error($categories)) : ?>
             <nav class="team-filters flex flex-wrap gap-x-8 gap-y-2 mb-10 text-sm"

@@ -93,6 +93,18 @@ add_action('acf/init', function() {
     ]);
 
     acf_register_block_type([
+        'name'            => 'contact',
+        'title'           => 'Contact',
+        'description'     => 'Volledig scherm contactsectie met nieuwsbrief formulier.',
+        'render_template' => get_template_directory() . '/blocks/contact/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'email',
+        'keywords'        => ['contact', 'formulier', 'nieuwsbrief'],
+        'mode'            => 'preview',
+        'supports'        => ['align' => false],
+    ]);
+
+    acf_register_block_type([
         'name'            => 'impact',
         'title'           => 'Impact',
         'description'     => 'Heading + tekst kolommen, genummerde blokken en optionele knop.',

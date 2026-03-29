@@ -15,7 +15,7 @@ $btn_url    = trim(get_field('impact_button_url') ?? '');
 ?>
 
 <section class="impact-block py-16 md:py-20" style="background-color:#f7f7f7;">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
 
         <!-- Top: heading left, text right -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-12">

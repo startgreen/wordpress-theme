@@ -22,7 +22,7 @@ $card_colors = [
 ?>
 
 <section class="stats-block py-16 md:py-24" style="background-color:var(--sg-dark-green);">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
