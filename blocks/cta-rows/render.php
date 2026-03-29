@@ -32,19 +32,19 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
 
         <!-- Heading -->
         <?php if ($heading1 || $heading2) : ?>
-            <div class="text-center mb-12">
+            <h2 class="text-center mb-12 leading-tight">
                 <?php if ($heading1) : ?>
-                    <p class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    <span class="block font-bold text-white text-4xl md:text-5xl">
                         <?php echo esc_html($heading1); ?>
-                    </p>
+                    </span>
                 <?php endif; ?>
                 <?php if ($heading2) : ?>
-                    <p class="text-4xl md:text-5xl leading-tight mt-1"
-                       style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                    <span class="block font-normal text-4xl md:text-5xl mt-1"
+                          style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
                         <?php echo esc_html($heading2); ?>
-                    </p>
+                    </span>
                 <?php endif; ?>
-            </div>
+            </h2>
         <?php endif; ?>
 
         <!-- Rows -->

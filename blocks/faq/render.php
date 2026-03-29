@@ -57,20 +57,20 @@ $icons = [
     <div class="max-w-5xl mx-auto px-6 md:px-12 py-16">
 
         <?php if ($h_deel1 || $h_deel2) : ?>
-            <div class="mb-10">
+            <h2 class="mb-10 leading-tight">
                 <?php if ($h_deel1) : ?>
-                    <p class="text-2xl md:text-3xl lg:text-4xl font-light leading-snug mb-1"
-                       style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: <?php echo esc_attr($c['h1']); ?>">
+                    <span class="block font-normal text-2xl md:text-3xl lg:text-4xl leading-snug mb-1"
+                          style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: <?php echo esc_attr($c['h1']); ?>">
                         <?php echo esc_html($h_deel1); ?>
-                    </p>
+                    </span>
                 <?php endif; ?>
                 <?php if ($h_deel2) : ?>
-                    <p class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
-                       style="color: <?php echo esc_attr($c['h2']); ?>">
+                    <span class="block font-bold text-3xl md:text-4xl lg:text-5xl"
+                          style="color: <?php echo esc_attr($c['h2']); ?>">
                         <?php echo esc_html($h_deel2); ?>
-                    </p>
+                    </span>
                 <?php endif; ?>
-            </div>
+            </h2>
         <?php endif; ?>
 
         <?php if ($intro_raw) : ?>

@@ -29,19 +29,19 @@ $card_colors = [
             <!-- Left: text -->
             <div>
                 <?php if ($heading1 || $heading2) : ?>
-                    <div class="mb-6">
+                    <h2 class="mb-6 leading-tight">
                         <?php if ($heading1) : ?>
-                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                            <span class="block font-bold text-white text-3xl md:text-4xl lg:text-5xl">
                                 <?php echo esc_html($heading1); ?>
-                        </h2>
+                            </span>
                         <?php endif; ?>
                         <?php if ($heading2) : ?>
-                            <p class="text-3xl md:text-4xl lg:text-5xl leading-tight"
-                               style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                            <span class="block font-normal text-3xl md:text-4xl lg:text-5xl"
+                                  style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
                                 <?php echo esc_html($heading2); ?>
-                            </p>
+                            </span>
                         <?php endif; ?>
-                    </div>
+                    </h2>
                 <?php endif; ?>
 
                 <?php if ($intro) : ?>
