@@ -1,0 +1,68 @@
+{
+    "key": "group_big_stats_block",
+    "title": "Block: Big Stats",
+    "fields": [
+        {
+            "key": "field_big_stats_items_repeater",
+            "label": "Statistieken",
+            "name": "big_stats_items",
+            "type": "repeater",
+            "instructions": "Voeg statistieken toe. Elke rij heeft een groot getal links en een omschrijving rechts.",
+            "layout": "block",
+            "min": 1,
+            "max": 0,
+            "button_label": "Voeg statistiek toe",
+            "sub_fields": [
+                {
+                    "key": "field_big_stats_item_getal",
+                    "label": "Getal",
+                    "name": "big_stats_item_getal",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "bijv. 670M"
+                },
+                {
+                    "key": "field_big_stats_item_omschrijving",
+                    "label": "Omschrijving",
+                    "name": "big_stats_item_omschrijving",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "bijv. Beheerd vermogen"
+                }
+            ]
+        },
+        {
+            "key": "field_big_stats_button_tekst",
+            "label": "Button tekst (optioneel)",
+            "name": "big_stats_button_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Lees ons volledige impactrapport 2024"
+        },
+        {
+            "key": "field_big_stats_button_url",
+            "label": "Button URL",
+            "name": "big_stats_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/big-stats"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900005
+}

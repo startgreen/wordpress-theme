@@ -8,6 +8,7 @@
   --sg-dark-green: #113223;
   --sg-brand-green: #3ecc9d;
   --sg-medium-green: #1f7f63;
+  --sg-light-grey: #e0e4e3;
 
   /* ── Site width ──────────────────────────────────────────────────────────── */
   --max-width-site: 82rem; /* change this one value to adjust content width site-wide */

@@ -69,6 +69,11 @@ add_action('acf/init', function() {
         'keywords'        => ['hero', 'banner', 'header'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'hero_subheading'   => 'Impact Investment Platform',
+            'hero_heading1'     => 'Investing in',
+            'hero_heading2'     => 'a better future',
+        ]]],
     ]);
 
     acf_register_block_type([
@@ -81,13 +86,18 @@ add_action('acf/init', function() {
         'keywords'        => ['faq', 'vragen', 'accordion'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'faq_achtergrond'   => 'green',
+            'faq_heading_deel1' => 'Veelgestelde',
+            'faq_heading_deel2' => 'vragen',
+        ]]],
         'enqueue_assets'  => function() {
             wp_enqueue_script(
                 'startgreen-faq',
                 get_template_directory_uri() . '/blocks/faq/faq.js',
                 [],
                 null,
-                true // in de footer laden
+                true
             );
         },
     ]);
@@ -102,6 +112,7 @@ add_action('acf/init', function() {
         'keywords'        => ['contact', 'formulier', 'nieuwsbrief'],
         'mode'            => 'preview',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview']],
     ]);
 
     acf_register_block_type([
@@ -114,6 +125,11 @@ add_action('acf/init', function() {
         'keywords'        => ['impact', 'blokken', 'cijfers', 'resultaten'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'impact_heading_italic' => 'Wat onze impact',
+            'impact_heading_bold'   => 'mogelijk maakt.',
+            'impact_tekst'          => '<p>De fondsen en financieringsstructuren die wij ontwikkelen, vertalen zich in concrete resultaten.</p>',
+        ]]],
     ]);
 
     acf_register_block_type([
@@ -126,6 +142,12 @@ add_action('acf/init', function() {
         'keywords'        => ['tekst', 'heading', 'intro', 'alinea'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'tekst_achtergrond'    => 'white',
+            'tekst_heading_italic' => 'Eén platform,',
+            'tekst_heading_bold'   => 'Meerdere routes naar impact',
+            'tekst_body'           => 'Binnen StartGreen komen verschillende financieringsbenaderingen samen.',
+        ]]],
     ]);
 
     acf_register_block_type([
@@ -138,6 +160,12 @@ add_action('acf/init', function() {
         'keywords'        => ['stats', 'statistieken', 'cijfers', 'impact'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'stats_heading_deel1' => 'Impact als onderdeel van',
+            'stats_heading_deel2' => 'uw investering.',
+            'stats_intro'         => 'Onze impactmeting is geen bijlage.',
+            'stats_button_tekst'  => 'Lees impactrapportages',
+        ]]],
     ]);
 
     acf_register_block_type([
@@ -150,6 +178,10 @@ add_action('acf/init', function() {
         'keywords'        => ['cta', 'rijen', 'links', 'navigatie'],
         'mode'            => 'auto',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'cta_heading_deel1' => 'Samen werken aan',
+            'cta_heading_deel2' => 'investeerbare transities?',
+        ]]],
     ]);
 
     acf_register_block_type([
@@ -162,6 +194,7 @@ add_action('acf/init', function() {
         'keywords'        => ['team', 'mensen', 'medewerkers'],
         'mode'            => 'preview',
         'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview']],
         'enqueue_assets'  => function() {
             wp_enqueue_script(
                 'startgreen-team',
@@ -171,6 +204,21 @@ add_action('acf/init', function() {
                 true
             );
         },
+    ]);
+
+    acf_register_block_type([
+        'name'            => 'big-stats',
+        'title'           => 'Big Stats',
+        'description'     => 'Grote statistieken in rijen met getal links en omschrijving rechts.',
+        'render_template' => get_template_directory() . '/blocks/big-stats/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'chart-line',
+        'keywords'        => ['stats', 'statistieken', 'cijfers', 'big', 'impact'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'big_stats_button_tekst' => 'Lees ons volledige impactrapport 2024',
+        ]]],
     ]);
 
     acf_register_block_type([
