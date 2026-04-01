@@ -207,6 +207,22 @@ add_action('acf/init', function() {
     ]);
 
     acf_register_block_type([
+        'name'            => 'three-blocks',
+        'title'           => 'Three Blocks',
+        'description'     => 'Twee-koloms heading + intro, gevolgd door drie gekleurde kaarten met subheading, tekst en knop.',
+        'render_template' => get_template_directory() . '/blocks/three-blocks/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'grid-view',
+        'keywords'        => ['three', 'blokken', 'kaarten', 'drie', 'cards'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'three_blocks_heading_bold'   => 'Voor wie wij',
+            'three_blocks_heading_italic' => 'Waarde creëren',
+        ]]],
+    ]);
+
+    acf_register_block_type([
         'name'            => 'big-stats',
         'title'           => 'Big Stats',
         'description'     => 'Grote statistieken in rijen met getal links en omschrijving rechts.',

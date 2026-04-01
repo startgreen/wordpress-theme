@@ -1,0 +1,170 @@
+{
+    "key": "group_three_blocks_block",
+    "title": "Block: Three Blocks",
+    "fields": [
+        {
+            "key": "field_three_blocks_heading_bold",
+            "label": "Heading — bold (regel 1)",
+            "name": "three_blocks_heading_bold",
+            "type": "text",
+            "instructions": "Vetgedrukte regel, donkergroen.",
+            "required": 0,
+            "placeholder": "bijv. Voor wie wij"
+        },
+        {
+            "key": "field_three_blocks_heading_italic",
+            "label": "Heading — italic (regel 2)",
+            "name": "three_blocks_heading_italic",
+            "type": "text",
+            "instructions": "Cursieve regel, mintgroen.",
+            "required": 0,
+            "placeholder": "bijv. Waarde creëren"
+        },
+        {
+            "key": "field_three_blocks_intro",
+            "label": "Intro tekst",
+            "name": "three_blocks_intro",
+            "type": "textarea",
+            "instructions": "Korte inleidende tekst rechts naast de heading.",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "bijv. Of u nu kapitaal wilt alloceren..."
+        },
+        {
+            "key": "field_three_blocks_tab_1",
+            "label": "Blok 1",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_three_blocks_block_1_subheading",
+            "label": "Subheading",
+            "name": "three_blocks_block_1_subheading",
+            "type": "text",
+            "required": 0,
+            "placeholder": "bijv. Voor beleggers"
+        },
+        {
+            "key": "field_three_blocks_block_1_tekst",
+            "label": "Tekst",
+            "name": "three_blocks_block_1_tekst",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "bijv. Gespecialiseerde impactfondsen met heldere proposities..."
+        },
+        {
+            "key": "field_three_blocks_block_1_button_tekst",
+            "label": "Button tekst (optioneel)",
+            "name": "three_blocks_block_1_button_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Investeringsmogelijkheden"
+        },
+        {
+            "key": "field_three_blocks_block_1_button_url",
+            "label": "Button URL",
+            "name": "three_blocks_block_1_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        },
+        {
+            "key": "field_three_blocks_tab_2",
+            "label": "Blok 2",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_three_blocks_block_2_subheading",
+            "label": "Subheading",
+            "name": "three_blocks_block_2_subheading",
+            "type": "text",
+            "required": 0,
+            "placeholder": "bijv. Voor projecten & ontwikkelaars"
+        },
+        {
+            "key": "field_three_blocks_block_2_tekst",
+            "label": "Tekst",
+            "name": "three_blocks_block_2_tekst",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "bijv. Flexibele financiering voor duurzame infrastructuur..."
+        },
+        {
+            "key": "field_three_blocks_block_2_button_tekst",
+            "label": "Button tekst (optioneel)",
+            "name": "three_blocks_block_2_button_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Financieringsmogelijkheden"
+        },
+        {
+            "key": "field_three_blocks_block_2_button_url",
+            "label": "Button URL",
+            "name": "three_blocks_block_2_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        },
+        {
+            "key": "field_three_blocks_tab_3",
+            "label": "Blok 3",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_three_blocks_block_3_subheading",
+            "label": "Subheading",
+            "name": "three_blocks_block_3_subheading",
+            "type": "text",
+            "required": 0,
+            "placeholder": "bijv. Voor ondernemers"
+        },
+        {
+            "key": "field_three_blocks_block_3_tekst",
+            "label": "Tekst",
+            "name": "three_blocks_block_3_tekst",
+            "type": "textarea",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "bijv. Kapitaal en betrokken partnerschap..."
+        },
+        {
+            "key": "field_three_blocks_block_3_button_tekst",
+            "label": "Button tekst (optioneel)",
+            "name": "three_blocks_block_3_button_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Investeringsaanpak"
+        },
+        {
+            "key": "field_three_blocks_block_3_button_url",
+            "label": "Button URL",
+            "name": "three_blocks_block_3_button_url",
+            "type": "url",
+            "required": 0,
+            "placeholder": "https://..."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/three-blocks"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900005
+}
