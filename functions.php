@@ -371,3 +371,64 @@ add_theme_support('post-thumbnails');
 
 // make team members draggable to reorder
 add_post_type_support('team', 'page-attributes');
+
+/**
+ * Nav walker — edit the Tailwind classes below to style the menu.
+ */
+class SG_Nav_Walker extends Walker_Nav_Menu {
+
+    // Opening <ul> for sub-menus (dropdown)
+    public function start_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '<ul class="absolute top-full left-0 mt-2 bg-white rounded-2xl shadow-xl min-w-[200px] p-2 hidden group-[.is-open]:block">';
+    }
+
+    public function end_lvl( &$output, $depth = 0, $args = null ) {
+        $output .= '</ul>';
+    }
+
+    public function start_el( &$output, $data_object, $depth = 0, $args = null, $current_object_id = 0 ) {
+        $item         = $data_object;
+        $classes      = empty( $item->classes ) ? [] : (array) $item->classes;
+        $has_children = in_array( 'menu-item-has-children', $classes, true );
+        $is_button    = in_array( 'nav-button', $classes, true ); // add class "nav-button" in WP menu editor for the Contact item
+
+        $url    = $item->url ? esc_url( $item->url ) : '#';
+        $title  = apply_filters( 'the_title', $item->title, $item->ID );
+        $target = $item->target ? ' target="' . esc_attr( $item->target ) . '"' : '';
+
+        if ( $depth === 0 ) {
+            // ── Top-level <li> ──────────────────────────────
+            $li_class = 'relative' . ( $has_children ? ' group is-open-toggle' : '' );
+            $output  .= '<li class="' . esc_attr( $li_class ) . '">';
+
+            if ( $is_button ) {
+                // Contact-style outlined button
+                $output .= '<a href="' . $url . '"' . $target
+                    . ' class="inline-flex items-center px-5 py-2 text-sm font-medium text-white border border-white/70 rounded-full hover:bg-white/15 transition-colors no-underline">'
+                    . esc_html( $title ) . '</a>';
+            } elseif ( $has_children ) {
+                // Link with dropdown arrow
+                $output .= '<button type="button" data-dropdown-toggle'
+                    . ' class="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm text-white/90 rounded-lg bg-transparent border-0 cursor-pointer hover:bg-white/10 hover:text-white transition-colors">'
+                    . esc_html( $title )
+                    . '<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform duration-200 opacity-60"><polyline points="6 9 12 15 18 9"/></svg>'
+                    . '</button>';
+            } else {
+                // Regular link
+                $output .= '<a href="' . $url . '"' . $target
+                    . ' class="inline-flex items-center px-3.5 py-2 text-sm text-white/90 rounded-lg hover:bg-white/10 hover:text-white transition-colors no-underline">'
+                    . esc_html( $title ) . '</a>';
+            }
+        } else {
+            // ── Sub-menu <li> + <a> ─────────────────────────
+            $output .= '<li>';
+            $output .= '<a href="' . $url . '"' . $target
+                . ' class="block px-4 py-2.5 text-sm rounded-lg hover:bg-[#e4e8ff] transition-colors no-underline" style="color: var(--sg-dark-green);">'
+                . esc_html( $title ) . '</a>';
+        }
+    }
+
+    public function end_el( &$output, $data_object, $depth = 0, $args = null ) {
+        $output .= '</li>';
+    }
+}
