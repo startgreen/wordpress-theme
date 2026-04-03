@@ -44,7 +44,7 @@
                         Schrijf u in voor
                     </span>
                     <span class="block font-normal"
-                          style="font-size: var(--fs-heading); font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: rgba(255,255,255,0.80);">
+                          style="font-size: var(--fs-heading); font-family: var(--font-serif); font-style: italic; color: rgba(255,255,255,0.80);">
                         onze nieuwsbrief
                     </span>
                 </h2>

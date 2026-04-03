@@ -1,0 +1,97 @@
+{
+    "key": "group_cta_verder_block",
+    "title": "Block: CTA Verder Bouwen",
+    "fields": [
+        {
+            "key": "field_cta_verder_achtergrond",
+            "label": "Achtergrondafbeelding",
+            "name": "cta_verder_achtergrond",
+            "type": "image",
+            "instructions": "Optioneel. Wordt gecombineerd met een donkergroene overlay. Aanbevolen: breed landschapsformaat.",
+            "required": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_cta_verder_heading_bold",
+            "label": "Heading — bold (regel 1)",
+            "name": "cta_verder_heading_bold",
+            "type": "text",
+            "instructions": "Vetgedrukte regel, wit.",
+            "required": 0,
+            "placeholder": "bijv. Klaar om"
+        },
+        {
+            "key": "field_cta_verder_heading_italic",
+            "label": "Heading — italic (regel 2)",
+            "name": "cta_verder_heading_italic",
+            "type": "text",
+            "instructions": "Cursieve regel, mintgroen.",
+            "required": 0,
+            "placeholder": "bijv. verder te bouwen"
+        },
+        {
+            "key": "field_cta_verder_tekst",
+            "label": "Tekst",
+            "name": "cta_verder_tekst",
+            "type": "textarea",
+            "instructions": "Korte alinea onder de heading.",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "bijv. Of u nu wilt investeren of financiering zoekt..."
+        },
+        {
+            "key": "field_cta_verder_button_1_tekst",
+            "label": "Primaire button tekst (optioneel)",
+            "name": "cta_verder_button_1_tekst",
+            "type": "text",
+            "instructions": "Laat leeg om de knop te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Neem contact op"
+        },
+        {
+            "key": "field_cta_verder_button_1_url",
+            "label": "Primaire button URL",
+            "name": "cta_verder_button_1_url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
+            "required": 0,
+            "return_format": "url"
+        },
+        {
+            "key": "field_cta_verder_button_2_tekst",
+            "label": "Secundaire link tekst (optioneel)",
+            "name": "cta_verder_button_2_tekst",
+            "type": "text",
+            "instructions": "Tekstlink naast de primaire knop. Laat leeg om te verbergen.",
+            "required": 0,
+            "placeholder": "bijv. Plan een gesprek"
+        },
+        {
+            "key": "field_cta_verder_button_2_url",
+            "label": "Secundaire link URL",
+            "name": "cta_verder_button_2_url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
+            "required": 0,
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/cta-verder"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "modified": 1774900005
+}

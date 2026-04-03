@@ -66,9 +66,10 @@
             "key": "field_three_blocks_block_1_button_url",
             "label": "Button URL",
             "name": "three_blocks_block_1_button_url",
-            "type": "url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
             "required": 0,
-            "placeholder": "https://..."
+            "return_format": "url"
         },
         {
             "key": "field_three_blocks_tab_2",
@@ -106,9 +107,10 @@
             "key": "field_three_blocks_block_2_button_url",
             "label": "Button URL",
             "name": "three_blocks_block_2_button_url",
-            "type": "url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
             "required": 0,
-            "placeholder": "https://..."
+            "return_format": "url"
         },
         {
             "key": "field_three_blocks_tab_3",
@@ -146,9 +148,10 @@
             "key": "field_three_blocks_block_3_button_url",
             "label": "Button URL",
             "name": "three_blocks_block_3_button_url",
-            "type": "url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
             "required": 0,
-            "placeholder": "https://..."
+            "return_format": "url"
         }
     ],
     "location": [

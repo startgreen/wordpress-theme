@@ -5,8 +5,8 @@
  *         big_stats_button_tekst, big_stats_button_url
  */
 
-$btn_tekst = trim(get_field('big_stats_button_tekst') ?? '');
-$btn_url   = trim(get_field('big_stats_button_url') ?? '');
+$btn_tekst  = trim(get_field('big_stats_button_tekst') ?? '');
+$btn_url    = trim(get_field('big_stats_button_url') ?? '');
 ?>
 
 <section class="big-stats-block py-16 md:py-20" style="background-color-white;">

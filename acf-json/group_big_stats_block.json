@@ -44,9 +44,10 @@
             "key": "field_big_stats_button_url",
             "label": "Button URL",
             "name": "big_stats_button_url",
-            "type": "url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
             "required": 0,
-            "placeholder": "https://..."
+            "return_format": "url"
         }
     ],
     "location": [

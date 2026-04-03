@@ -1,5 +1,15 @@
 <?php
 
+// Enqueue Google Fonts
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style(
+        'theme-fonts',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap',
+        [],
+        null
+    );
+});
+
 // Enqueue frontend styles
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('theme-style', get_stylesheet_uri());
@@ -90,6 +100,11 @@ add_action('acf/init', function() {
             'faq_achtergrond'   => 'green',
             'faq_heading_deel1' => 'Veelgestelde',
             'faq_heading_deel2' => 'vragen',
+            'faq_items'         => [
+                ['faq_vraag' => 'Wat doet StartGreen Capital?', 'faq_antwoord' => 'StartGreen Capital beheert impactfondsen gericht op de energie- en circulaire transitie.'],
+                ['faq_vraag' => 'Voor wie zijn de fondsen beschikbaar?', 'faq_antwoord' => 'Onze fondsen zijn beschikbaar voor institutionele beleggers en vermogende particulieren.'],
+                ['faq_vraag' => 'Hoe wordt impact gemeten?', 'faq_antwoord' => 'Wij hanteren een jaarlijkse impactmeting op basis van erkende SDG-indicatoren.'],
+            ],
         ]]],
         'enqueue_assets'  => function() {
             wp_enqueue_script(
@@ -129,6 +144,12 @@ add_action('acf/init', function() {
             'impact_heading_italic' => 'Wat onze impact',
             'impact_heading_bold'   => 'mogelijk maakt.',
             'impact_tekst'          => '<p>De fondsen en financieringsstructuren die wij ontwikkelen, vertalen zich in concrete resultaten.</p>',
+            'impact_items'          => [
+                ['impact_item_tekst' => 'Impactdoelstellingen zijn onderdeel van fondsstrategie en investeringsbeslissingen'],
+                ['impact_item_tekst' => 'Jaarlijkse impactmeting op basis van erkende SDG-indicatoren'],
+                ['impact_item_tekst' => 'Transparante rapportage aan investeerders over behaalde impact'],
+                ['impact_item_tekst' => 'Actief beheer gericht op het vergroten van maatschappelijke waarde'],
+            ],
         ]]],
     ]);
 
@@ -163,8 +184,14 @@ add_action('acf/init', function() {
         'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
             'stats_heading_deel1' => 'Impact als onderdeel van',
             'stats_heading_deel2' => 'uw investering.',
-            'stats_intro'         => 'Onze impactmeting is geen bijlage.',
+            'stats_intro'         => 'Onze impactmeting is geen bijlage — het is de kern van onze beleggingsfilosofie.',
             'stats_button_tekst'  => 'Lees impactrapportages',
+            'stats_items'         => [
+                ['stats_item_getal' => '€670M', 'stats_item_omschrijving' => 'Beheerd vermogen'],
+                ['stats_item_getal' => '250+',  'stats_item_omschrijving' => 'Investeringen gerealiseerd'],
+                ['stats_item_getal' => '20 jr', 'stats_item_omschrijving' => 'Ervaring in impactinvesteringen'],
+                ['stats_item_getal' => '5',     'stats_item_omschrijving' => 'Gespecialiseerde fondsen'],
+            ],
         ]]],
     ]);
 
@@ -181,6 +208,11 @@ add_action('acf/init', function() {
         'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
             'cta_heading_deel1' => 'Samen werken aan',
             'cta_heading_deel2' => 'investeerbare transities?',
+            'cta_items'         => [
+                ['cta_item_label' => 'Voor beleggers',    'cta_item_tekst' => 'Ontdek investeringsmogelijkheden'],
+                ['cta_item_label' => 'Voor projecten',    'cta_item_tekst' => 'Financiering voor duurzame initiatieven'],
+                ['cta_item_label' => 'Voor ondernemers',  'cta_item_tekst' => 'Kapitaal en betrokken partnerschap'],
+            ],
         ]]],
     ]);
 
@@ -207,6 +239,37 @@ add_action('acf/init', function() {
     ]);
 
     acf_register_block_type([
+        'name'            => 'last-2-blogs',
+        'title'           => 'Last 2 Blogs',
+        'description'     => 'Toont automatisch de 2 meest recente blogposts met afbeelding, datum, titel, excerpt en link.',
+        'render_template' => get_template_directory() . '/blocks/last-2-blogs/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'admin-post',
+        'keywords'        => ['blog', 'posts', 'artikelen', 'laatste', 'nieuws'],
+        'mode'            => 'preview',
+        'supports'        => ['align' => false],
+    ]);
+
+    acf_register_block_type([
+        'name'            => 'cta-verder',
+        'title'           => 'CTA Verder Bouwen',
+        'description'     => 'Volledige breedte CTA-sectie met achtergrondafbeelding, heading, tekst en twee knoppen.',
+        'render_template' => get_template_directory() . '/blocks/cta-verder/render.php',
+        'category'        => 'startgreen',
+        'icon'            => 'megaphone',
+        'keywords'        => ['cta', 'call to action', 'verder', 'bouwen', 'contact'],
+        'mode'            => 'auto',
+        'supports'        => ['align' => false],
+        'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'cta_verder_heading_bold'   => 'Klaar om',
+            'cta_verder_heading_italic' => 'verder te bouwen',
+            'cta_verder_tekst'          => 'Of u nu wilt investeren of financiering zoekt: StartGreen Capital is de partner die structuur, expertise en betrokkenheid samenbrengt.',
+            'cta_verder_button_1_tekst' => 'Neem contact op',
+            'cta_verder_button_2_tekst' => 'Plan een gesprek',
+        ]]],
+    ]);
+
+    acf_register_block_type([
         'name'            => 'three-blocks',
         'title'           => 'Three Blocks',
         'description'     => 'Twee-koloms heading + intro, gevolgd door drie gekleurde kaarten met subheading, tekst en knop.',
@@ -217,8 +280,18 @@ add_action('acf/init', function() {
         'mode'            => 'auto',
         'supports'        => ['align' => false],
         'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
-            'three_blocks_heading_bold'   => 'Voor wie wij',
-            'three_blocks_heading_italic' => 'Waarde creëren',
+            'three_blocks_heading_bold'        => 'Voor wie wij',
+            'three_blocks_heading_italic'      => 'Waarde creëren',
+            'three_blocks_intro'               => 'Of u nu kapitaal wilt alloceren, financiering zoekt of bouwt aan een schaalbare onderneming.',
+            'three_blocks_block_1_subheading'  => 'Voor beleggers',
+            'three_blocks_block_1_tekst'       => 'Gespecialiseerde impactfondsen met heldere proposities en professionele rapportage.',
+            'three_blocks_block_1_button_tekst'=> 'Investeringsmogelijkheden',
+            'three_blocks_block_2_subheading'  => 'Voor projecten & ontwikkelaars',
+            'three_blocks_block_2_tekst'       => 'Flexibele financiering voor duurzame infrastructuur en circulaire projecten.',
+            'three_blocks_block_2_button_tekst'=> 'Financieringsmogelijkheden',
+            'three_blocks_block_3_subheading'  => 'Voor ondernemers',
+            'three_blocks_block_3_tekst'       => 'Kapitaal en betrokken partnerschap voor inclusieve en schaalbare impact.',
+            'three_blocks_block_3_button_tekst'=> 'Investeringsaanpak',
         ]]],
     ]);
 
@@ -233,6 +306,12 @@ add_action('acf/init', function() {
         'mode'            => 'auto',
         'supports'        => ['align' => false],
         'example'         => ['attributes' => ['mode' => 'preview', 'data' => [
+            'big_stats_items'        => [
+                ['big_stats_item_getal' => '670M',  'big_stats_item_omschrijving' => 'Beheerd vermogen'],
+                ['big_stats_item_getal' => '20',    'big_stats_item_omschrijving' => 'Jaar ervaring in impactinvesteringen'],
+                ['big_stats_item_getal' => '250',   'big_stats_item_omschrijving' => 'Investeringen gerealiseerd'],
+                ['big_stats_item_getal' => '1.136', 'big_stats_item_omschrijving' => 'FTE werkgelegenheid gecreëerd'],
+            ],
             'big_stats_button_tekst' => 'Lees ons volledige impactrapport 2024',
         ]]],
     ]);

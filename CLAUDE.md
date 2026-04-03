@@ -47,6 +47,15 @@ Defined as CSS custom properties in `style.css` → `:root`. Always reference th
 | `--fs-heading-italic` | `2rem` | Italic heading size |
 | `--fs-subheading` | `1.25rem` | Subheading size |
 
+**Font families** are CSS variables — never hardcode `font-family` in block templates:
+
+| Variable | Default | Use |
+|---|---|---|
+| `--font-sans` | `'Inter', system-ui, sans-serif` | Body, headings, UI |
+| `--font-serif` | `'Playfair Display', Georgia, serif` | Italic heading accents |
+
+To swap fonts: update the Google Fonts URL in `functions.php` and the variable values in `style.css :root`. Always use `var(--font-sans)` / `var(--font-serif)` in templates.
+
 **`style.css` is the single source of truth for colour values.** `tailwind.config.js` and `theme.json` both reference the CSS variables (`var(--sg-brand-green)`) — never duplicate the hex value. When adding a new colour: add the hex once to `:root` in `style.css`, then add a `var()` reference in `tailwind.config.js` and `theme.json`.
 
 ## How blocks work

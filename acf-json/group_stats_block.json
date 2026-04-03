@@ -31,10 +31,10 @@
         },
         {
             "key": "field_stats_button_tekst",
-            "label": "Button tekst",
+            "label": "Button tekst (optioneel)",
             "name": "stats_button_tekst",
             "type": "text",
-            "instructions": "Tekst van de knop (laat leeg om knop te verbergen).",
+            "instructions": "Laat leeg om de knop te verbergen.",
             "required": 0,
             "placeholder": "bijv. Lees al onze impactrapportages"
         },
@@ -42,9 +42,10 @@
             "key": "field_stats_button_url",
             "label": "Button URL",
             "name": "stats_button_url",
-            "type": "url",
+            "type": "link",
+            "instructions": "Kies een pagina of voer een eigen URL in.",
             "required": 0,
-            "placeholder": "https://..."
+            "return_format": "url"
         },
         {
             "key": "field_stats_items_repeater",

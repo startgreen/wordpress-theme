@@ -39,7 +39,7 @@ $aria_label = trim(($heading1 ?? '') . ' ' . ($heading2 ?? '')) ?: 'Hero sectie'
             <?php endif; ?>
             <?php if ($heading2) : ?>
                 <em class="block text-[#7ecfa0] text-5xl md:text-6xl lg:text-[4.5rem] font-normal leading-tight not-italic"
-                    style="font-family: Georgia, 'Times New Roman', serif; font-style: italic;">
+                    style="font-family: var(--font-serif); font-style: italic;">
                     <?php echo esc_html($heading2); ?>
                 </em>
             <?php endif; ?>

@@ -40,7 +40,7 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
                 <?php endif; ?>
                 <?php if ($heading2) : ?>
                     <span class="block font-normal text-4xl md:text-5xl mt-1"
-                          style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                          style="font-family: var(--font-serif); font-style: italic; color: var(--sg-brand-green);">
                         <?php echo esc_html($heading2); ?>
                     </span>
                 <?php endif; ?>
@@ -51,11 +51,13 @@ $heading2 = trim(get_field('cta_heading_deel2') ?? '');
         <?php if (have_rows('cta_items')) : ?>
             <div class="max-w-2xl mx-auto flex flex-col gap-3">
                 <?php while (have_rows('cta_items')) : the_row();
-                    $label = get_sub_field('cta_item_label');
-                    $tekst = get_sub_field('cta_item_tekst');
-                    $url   = get_sub_field('cta_item_url');
-                    $tag   = $url ? 'a' : 'div';
-                    $attrs = $url ? 'href="' . esc_url($url) . '"' : '';
+                    $label  = get_sub_field('cta_item_label');
+                    $tekst  = get_sub_field('cta_item_tekst');
+                    $link   = get_sub_field('cta_item_link');
+                    $url    = is_array($link) ? ($link['url'] ?? '') : '';
+                    $target = is_array($link) ? ($link['target'] ?: '_self') : '_self';
+                    $tag    = $url ? 'a' : 'div';
+                    $attrs  = $url ? 'href="' . esc_url($url) . '" target="' . esc_attr($target) . '"' : '';
                 ?>
                     <<?php echo $tag; ?> <?php echo $attrs; ?>
                         class="cta-row flex items-center justify-between px-7 py-5 rounded-xl"

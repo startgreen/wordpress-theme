@@ -42,7 +42,7 @@ unset($card);
                         <?php endif; ?>
                         <?php if ($heading_italic) : ?>
                             <span class="block font-normal"
-                                  style="font-size: var(--fs-heading); font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                                  style="font-size: var(--fs-heading); font-family: var(--font-serif); font-style: italic; color: var(--sg-brand-green);">
                                 <?php echo esc_html($heading_italic); ?>
                             </span>
                         <?php endif; ?>

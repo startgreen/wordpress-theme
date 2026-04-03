@@ -26,7 +26,7 @@ $btn_url    = trim(get_field('impact_button_url') ?? '');
                     <h2 class="leading-tight mb-0">
                         <?php if ($italic) : ?>
                             <span class="block font-normal leading-snug mb-1"
-                                  style="font-size: var(--fs-heading-italic); font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                                  style="font-size: var(--fs-heading-italic); font-family: var(--font-serif); font-style: italic; color: var(--sg-brand-green);">
                                 <?php echo esc_html($italic); ?>
                             </span>
                         <?php endif; ?>

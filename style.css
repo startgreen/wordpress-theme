@@ -2,6 +2,12 @@
    Change --radius-card here to update ALL card/image border radii site-wide.
    ─────────────────────────────────────────────────────────────────────────── */
 :root {
+  /* ── Font families ───────────────────────────────────────────────────────── */
+  --font-sans:   'Inter', system-ui, sans-serif;   /* body text, headings, UI */
+  --font-serif:  'Playfair Display', Georgia, serif; /* italic heading accents */
+
+  /* ── Font sizes ──────────────────────────────────────────────────────────── */
+
   /* ── Brand colours ───────────────────────────────────────────────────────── */
   --sg-light-green: #cff7ea;
   --sg-blue: #cff7ea;

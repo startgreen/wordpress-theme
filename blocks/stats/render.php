@@ -37,7 +37,7 @@ $card_colors = [
                         <?php endif; ?>
                         <?php if ($heading2) : ?>
                             <span class="block font-normal text-3xl md:text-4xl lg:text-5xl"
-                                  style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--sg-brand-green);">
+                                  style="font-family: var(--font-serif); font-style: italic; color: var(--sg-brand-green);">
                                 <?php echo esc_html($heading2); ?>
                             </span>
                         <?php endif; ?>

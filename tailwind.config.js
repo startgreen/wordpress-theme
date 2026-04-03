@@ -2,6 +2,10 @@ module.exports = {
   content: ["./**/*.php"],
   theme: {
     extend: {
+      fontFamily: {
+        sans:  ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
+      },
       colors: {
         'sg-light-green':  'var(--sg-light-green)',
         'sg-dark-green':   'var(--sg-dark-green)',

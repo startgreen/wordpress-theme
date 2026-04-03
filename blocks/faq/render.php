@@ -60,7 +60,7 @@ $icons = [
             <h2 class="mb-10 leading-tight">
                 <?php if ($h_deel1) : ?>
                     <span class="block font-normal text-2xl md:text-3xl lg:text-4xl leading-snug mb-1"
-                          style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: <?php echo esc_attr($c['h1']); ?>">
+                          style="font-family: var(--font-serif); font-style: italic; color: <?php echo esc_attr($c['h1']); ?>">
                         <?php echo esc_html($h_deel1); ?>
                     </span>
                 <?php endif; ?>
@@ -149,7 +149,7 @@ $icons = [
                         </strong>
                     <?php endif; ?>
                     <?php if ($slot2) : ?>
-                        <em style="font-family: Georgia, serif; font-style: italic; color: <?php echo esc_attr($c['slot2']); ?>">
+                        <em style="font-family: var(--font-serif); font-style: italic; color: <?php echo esc_attr($c['slot2']); ?>">
                             <?php echo esc_html($slot2); ?>
                         </em>
                     <?php endif; ?>

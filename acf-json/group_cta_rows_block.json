@@ -45,12 +45,13 @@
                     "placeholder": "bijv. Ontdek investeringsmogelijkheden"
                 },
                 {
-                    "key": "field_cta_item_url",
-                    "label": "URL (optioneel)",
-                    "name": "cta_item_url",
-                    "type": "url",
+                    "key": "field_cta_item_link",
+                    "label": "Link (optioneel)",
+                    "name": "cta_item_link",
+                    "type": "link",
+                    "instructions": "Kies een pagina of voer een eigen URL in.",
                     "required": 0,
-                    "placeholder": "https://..."
+                    "return_format": "array"
                 }
             ]
         }

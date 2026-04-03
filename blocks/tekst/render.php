@@ -41,7 +41,7 @@ $body_raw   = trim(get_field('tekst_body') ?? '');
                 <h2 class="mb-6 leading-tight">
                     <?php if ($italic) : ?>
                         <span class="block mb-1"
-                              style="font-size: var(--fs-heading-italic); font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; color: <?php echo esc_attr($c['italic']); ?>;">
+                              style="font-size: var(--fs-heading-italic); font-family: var(--font-serif); font-style: italic; font-weight: 400; color: <?php echo esc_attr($c['italic']); ?>;">
                             <?php echo esc_html($italic); ?>
                         </span>
                     <?php endif; ?>
