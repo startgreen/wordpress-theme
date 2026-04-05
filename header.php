@@ -4,6 +4,25 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'sg-brand-green':  'var(--sg-brand-green)',
+                    'sg-dark-green':   'var(--sg-dark-green)',
+                    'sg-medium-green': 'var(--sg-medium-green)',
+                    'sg-light-green':  'var(--sg-light-green)',
+                    'sg-light-grey':   'var(--sg-light-grey)',
+                },
+                fontFamily: {
+                    sans:  ['var(--font-sans)'],
+                    serif: ['var(--font-serif)'],
+                },
+            },
+        },
+    }
+    </script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
